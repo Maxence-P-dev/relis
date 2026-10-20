@@ -6,6 +6,10 @@
 
 <p align="center"><b>Un raccourci clavier pour corriger tes fautes, partout.</b><br>Discord, navigateur, mails, Word : sélectionne ton texte (ou reste dans le champ), appuie sur <kbd>Ctrl</kbd> + <kbd>Maj</kbd> + <kbd>Espace</kbd>, valide les corrections.</p>
 
+<p align="center">
+  <a href="https://github.com/Maxence-P-dev/relis/releases/latest/download/Relis-Setup.exe"><b>Télécharger l'installeur Windows</b></a> · <a href="https://github.com/Maxence-P-dev/relis/releases/latest/download/Relis-Portable.zip">Version portable (.zip)</a>
+</p>
+
 ## Comment ça marche
 
 1. Relis tourne en fond : son icône est dans la zone de notification, à côté de l'horloge.
