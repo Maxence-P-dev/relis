@@ -1,0 +1,67 @@
+{
+  "name": "relis",
+  "version": "1.0.0",
+  "description": "Relis : un raccourci clavier pour corriger les fautes de français dans n'importe quelle application Windows.",
+  "main": "app/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test test/*.test.cjs",
+    "icons": "node scripts/make-icons.mjs",
+    "dist": "electron-builder --win --x64 --publish never"
+  },
+  "author": "Maxence-P-dev",
+  "license": "MIT",
+  "productName": "Relis",
+  "build": {
+    "appId": "com.relis.app",
+    "productName": "Relis",
+    "copyright": "© 2026 Maxence-P-dev",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "app/**/*",
+      "package.json"
+    ],
+    "win": {
+      "icon": "build/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "zip",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "Relis-Portable.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": false,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Relis",
+      "artifactName": "Relis-Setup.${ext}",
+      "language": "1036",
+      "runAfterFinish": true,
+      "menuCategory": false
+    }
+  },
+  "devDependencies": {
+    "electron": "^44.9.1",
+    "electron-builder": "^26.15.3",
+    "png-to-ico": "^3.0.2",
+    "sharp": "^0.35.5"
+  },
+  "allowScripts": {
+    "electron-winstaller@5.4.0": true
+  }
+}
